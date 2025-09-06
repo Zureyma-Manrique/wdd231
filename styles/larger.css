@@ -1,0 +1,51 @@
+@media (min-width: 768px) {
+
+    /* --- Header and Navigation --- */
+    #menu {
+        display: none;
+        /* Hide hamburger on larger screens */
+    }
+
+    nav ul {
+        display: flex;
+        /* Display nav links horizontally */
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 1rem 1.5rem;
+    }
+
+    /* --- Main Content --- */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        /* Center the main content */
+    }
+
+    /* --- About Me Card (Flexbox Layout) --- */
+    .about-me-card {
+        display: flex;
+        align-items: center;
+        /* Vertically align image and text */
+        gap: 2rem;
+        /* Space between image and text */
+    }
+
+    .about-me-card img {
+        max-width: 250px;
+        margin: 0;
+        /* Remove mobile margin */
+    }
+
+    .about-me-text {
+        flex: 1;
+        /* Allow text to take remaining space */
+    }
+
+    /* --- Web Courses Section (Grid Layout) --- */
+    #course-container {
+        /* Create a responsive grid for course cards */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}

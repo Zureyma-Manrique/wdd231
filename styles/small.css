@@ -1,0 +1,172 @@
+/* --- Global Variables and Styles --- */
+:root {
+    --primary-color: #0077b6;
+    --secondary-color: #0096c7;
+    --accent-color: #90e0ef;
+    --completed-bg: #d4edda;
+    /* Green for completed courses */
+    --completed-border: #c3e6cb;
+    --text-color: #333;
+    --bg-color: #f4f4f4;
+    --card-bg: #ffffff;
+    --header-text: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- Header and Navigation --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--header-text);
+    padding: 1rem;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+#menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--header-text);
+    cursor: pointer;
+    padding: 0;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✕";
+}
+
+nav {
+    background-color: var(--secondary-color);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    /* Hidden by default for mobile */
+}
+
+nav ul.open {
+    display: block;
+    /* Shown when hamburger is clicked */
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    color: var(--header-text);
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+}
+
+/* Style for the active/current page link (Wayfinding) */
+nav a.active {
+    background-color: #005f86;
+    text-decoration: underline;
+}
+
+/* --- Main Content --- */
+main {
+    padding: 1rem;
+}
+
+h1 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+}
+
+/* --- About Me Card --- */
+.about-me-card img {
+    width: 100%;
+    max-width: 250px;
+    /* Control image size on mobile */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 1rem auto;
+    /* Center the image */
+}
+
+/* --- Web Courses Section --- */
+.filter-buttons {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.filter-buttons button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--accent-color);
+}
+
+#course-container {
+    display: grid;
+    gap: 1rem;
+}
+
+.course-card {
+    border: 1px solid var(--accent-color);
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #eaf8ff;
+}
+
+.course-card.completed {
+    background-color: var(--completed-bg);
+    border-color: var(--completed-border);
+}
+
+.course-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--header-text);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+footer a {
+    color: var(--header-text);
+    margin: 0 0.5rem;
+}
