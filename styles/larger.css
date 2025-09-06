@@ -16,31 +16,20 @@
         padding: 1rem 1.5rem;
     }
 
-    /* --- Main Content --- */
+    /* --- Main Content Grid Layout --- */
     main {
         max-width: 1200px;
         margin: 0 auto;
         /* Center the main content */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* Create two equal columns */
+        gap: 1.5rem;
     }
 
-    /* --- About Me Card (Flexbox Layout) --- */
-    .about-me-card {
-        display: flex;
-        align-items: center;
-        /* Vertically align image and text */
-        gap: 2rem;
-        /* Space between image and text */
-    }
-
-    .about-me-card img {
-        max-width: 250px;
-        margin: 0;
-        /* Remove mobile margin */
-    }
-
-    .about-me-text {
-        flex: 1;
-        /* Allow text to take remaining space */
+    .full-width {
+        grid-column: 1 / -1;
+        /* Make the courses section span both columns */
     }
 
     /* --- Web Courses Section (Grid Layout) --- */

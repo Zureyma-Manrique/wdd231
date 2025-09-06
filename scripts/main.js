@@ -28,42 +28,42 @@ const courses = [
     number: 110,
     title: 'Intro to Programming',
     credits: 2,
-    completed: true 
+    completed: true // ❗ Change to true if you have completed this course
   },
   {
     subject: 'WDD',
     number: 130,
     title: 'Web Fundamentals',
     credits: 2,
-    completed: true 
+    completed: true // ❗ Change to true if you have completed this course
   },
   {
     subject: 'CSE',
     number: 111,
     title: 'Programming with Functions',
     credits: 2,
-    completed: false 
+    completed: false // ❗ Change to true if you have completed this course
   },
   {
     subject: 'CSE',
     number: 210,
     title: 'Programming with Classes',
     credits: 2,
-    completed: false
+    completed: false // ❗ Change to true if you have completed this course
   },
   {
     subject: 'WDD',
     number: 131,
     title: 'Dynamic Web Fundamentals',
     credits: 2,
-    completed: false 
+    completed: false // ❗ Change to true if you have completed this course
   },
   {
     subject: 'WDD',
     number: 231,
     title: 'Web Frontend Development I',
     credits: 2,
-    completed: false
+    completed: false // ❗ Change to true if you have completed this course
   }
 ];
 

@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -104,16 +104,13 @@ h1 {
     padding: 1.5rem;
 }
 
-/* --- About Me Card --- */
-.about-me-card img {
+.card img {
     width: 100%;
-    max-width: 250px;
-    /* Control image size on mobile */
+    max-width: 300px;
     height: auto;
-    border-radius: 10px;
     display: block;
-    margin: 0 auto 1rem auto;
-    /* Center the image */
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
 /* --- Web Courses Section --- */
