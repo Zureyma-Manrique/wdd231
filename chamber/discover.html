@@ -1,129 +1,52 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Discover the vibrant attractions and unique points of interest in Timbuktu. Our Chamber of Commerce guide provides detailed information on historical sites, local markets, and cultural landmarks to help you plan your visit. Explore everything Timbuktu has to offer.">
-    <meta name="author" content="Your Name">
-    <meta property="og:title" content="Discover Timbuktu Chamber of Commerce">
+    <title>Discover Timbuktu | Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Discover attractions and points of interest in Timbuktu.">
+    <meta name="author" content="Zureyma Quetzaili Manrique Santiago">
+
+    <meta property="og:title" content="Discover Timbuktu">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://zureyma-manrique.github.io/wdd231/chamber/images/hero-large.webp">
+    <meta property="og:image" content="https://zureyma-manrique.github.io/wdd231/chamber/images/logo.png">
     <meta property="og:url" content="https://zureyma-manrique.github.io/wdd231/chamber/discover.html">
-    <meta property="og:description"
-        content="Explore Timbuktu's rich history, culture, and business opportunities with our Chamber of Commerce discover page.">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:description" content="Discover interesting places of Timbuktu.">
 
-    <title>Discover Timbuktu | Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/medium.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/discover.css">
 </head>
 
 <body>
     <header>
-        <h1>Timbuktu Chamber of Commerce</h1>
+        <div class="site-name">Timbuktu Chamber of Commerce</div>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="discover.html" class="active">Discover</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-            </ul>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+            <a href="discover.html" class="active">Discover</a>
         </nav>
     </header>
 
     <main>
-        <h2>Discover Timbuktu</h2>
-
-        <div id="lastVisitMessage"></div>
-
-        <div class="discover-grid">
-            <div class="card">
-                <img src="images/sankore-university.webp" alt="Sankore University Mosque" width="400" height="300"
-                    loading="lazy">
-                <h3>Sankore University</h3>
-                <p>Address: Sankore District, Timbuktu</p>
-                <p>Description: One of the three ancient centers of learning in Timbuktu, an intellectual and spiritual
-                    center.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card">
-                <img src="images/djinguereber-mosque.webp" alt="Djinguereber Mosque" width="400" height="300"
-                    loading="lazy">
-                <h3>Djinguereber Mosque</h3>
-                <p>Address: Yubu-Kaina District, Timbuktu</p>
-                <p>Description: A famous learning center of Timbuktu, built in 1327, made from mud-brick and organic
-                    materials.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card">
-                <img src="images/sidi-yahya-mosque.webp" alt="Sidi Yahya Mosque" width="400" height="300"
-                    loading="lazy">
-                <h3>Sidi Yahya Mosque</h3>
-                <p>Address: Saray-Kaina District, Timbuktu</p>
-                <p>Description: Dating back to 1440, this mosque is a key part of Timbuktu's historic scholarly
-                    community.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card">
-                <img src="images/timbuktu-market.webp" alt="Timbuktu Grand Market" width="400" height="300"
-                    loading="lazy">
-                <h3>Grand Marché</h3>
-                <p>Address: Central Square, Timbuktu</p>
-                <p>Description: The bustling central market where you can find local crafts, foods, and textiles.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card">
-                <img src="images/historical-manuscripts.webp" alt="Ancient Manuscripts of Timbuktu" width="400"
-                    height="300" loading="lazy">
-                <h3>Manuscript Libraries</h3>
-                <p>Address: Various Locations</p>
-                <p>Description: Home to thousands of priceless ancient manuscripts on science, medicine, and philosophy.
-                </p>
-                <button>Learn More</button>
-            </div>
-            <div class="card">
-                <img src="images/tuareg-encampment.webp" alt="Traditional Tuareg Encampment" width="400" height="300"
-                    loading="lazy">
-                <h3>Tuareg Culture Experience</h3>
-                <p>Address: Sahara Desert Outskirts</p>
-                <p>Description: Visit a traditional encampment to learn about the history and culture of the Tuareg
-                    people.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card">
-                <img src="images/explorers-houses.webp" alt="Historic Houses of Explorers" width="400" height="300"
-                    loading="lazy">
-                <h3>Houses of Explorers</h3>
-                <p>Address: Old City District, Timbuktu</p>
-                <p>Description: See the historic homes where famous explorers like Heinrich Barth and René Caillié
-                    stayed.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card">
-                <img src="images/niger-river-port.webp" alt="Port of Timbuktu on the Niger River" width="400"
-                    height="300" loading="lazy">
-                <h3>Niger River Port</h3>
-                <p>Address: Korioumé, near Timbuktu</p>
-                <p>Description: The historical gateway to Timbuktu for salt caravans and trade along the Niger River.
-                </p>
-                <button>Learn More</button>
-            </div>
+        <h1>Discover Timbuktu</h1>
+        <div id="visitor-message"></div>
+        <div id="discover-container">
         </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="currentYear"></span> Timbuktu Chamber | Your Name | WDD 231 Project</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="current-year"></span> Timbuktu Chamber of Commerce</p>
+        <p>Zureyma Quetzaili Manrique Santiago | WDD 231</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
-
-    <script src="scripts/main.js"></script>
     <script src="scripts/discover.js"></script>
 </body>
 
