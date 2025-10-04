@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Timbuktu Chamber of Commerce</title>
+    <meta name="description" content="Join the Timbuktu Chamber of Commerce.">
+    <meta name="author" content="Zureyma Quetzaili Manrique Santiago">
+
+    <meta property="og:title" content="Timbuktu Chamber Join Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://zureyma-manrique.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://zureyma-manrique.github.io/wdd231/chamber/join.html">
+    <meta property="og:description" content="Membership application form for the Timbuktu Chamber of Commerce.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="site-name">Timbuktu Chamber of Commerce</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html" class="active">Join</a>
+            <a href="#">Discover</a>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <div class="form-container">
+            <h1>Join Our Chamber</h1>
+            <form action="thankyou.html" method="get">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" name="firstName" required autocomplete="given-name" title="First Name">
+
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" name="lastName" required autocomplete="family-name" title="Last Name">
+
+                <label for="title">Title*</label>
+                <input type="text" id="title" name="title" pattern="[a-zA-Z\\-\\s]{7,}" autocomplete="organization-title" title="Organizational Title (min 7 chars, letters, spaces, hyphens only)">
+
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@example.com" title="Email Address">
+
+                <label for="mobile">Mobile Phone*</label>
+                <input type="tel" id="mobile" name="mobile" required autocomplete="tel" title="Mobile Phone Number">
+
+                <label for="organization">Business/Organization Name*</label>
+                <input type="text" id="organization" name="organization" required autocomplete="organization" title="Business or Organization Name">
+
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <label><input type="radio" name="membershipLevel" value="NP"> NP Membership (Non-Profit)</label>
+                    <label><input type="radio" name="membershipLevel" value="Bronze"> Bronze Membership</label>
+                    <label><input type="radio" name="membershipLevel" value="Silver"> Silver Membership</label>
+                    <label><input type="radio" name="membershipLevel" value="Gold"> Gold Membership</label>
+                </fieldset>
+
+                <label for="description">Business/Organization Description</label>
+                <textarea id="description" name="description" title="Business Description"></textarea>
+
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <input type="submit" value="Join the Chamber">
+            </form>
+        </div>
+
+        <div class="membership-levels">
+            <h2>Membership Levels</h2>
+            <div class="membership-card" id="np-card">
+                <h3>NP Membership</h3>
+                <p>For non-profit organizations. No fee.</p>
+                <a href="#" class="modal-link" data-modal="np-modal">Learn More</a>
+            </div>
+            <div class="membership-card" id="bronze-card">
+                <h3>Bronze Membership</h3>
+                <p>Ideal for small businesses.</p>
+                <a href="#" class="modal-link" data-modal="bronze-modal">Learn More</a>
+            </div>
+            <div class="membership-card" id="silver-card">
+                <h3>Silver Membership</h3>
+                <p>Great value for growing businesses.</p>
+                <a href="#" class="modal-link" data-modal="silver-modal">Learn More</a>
+            </div>
+            <div class="membership-card" id="gold-card">
+                <h3>Gold Membership</h3>
+                <p>Maximum benefits and exposure.</p>
+                <a href="#" class="modal-link" data-modal="gold-modal">Learn More</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="np-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>NP Membership Benefits</h2>
+            <ul>
+                <li>Listing in the chamber directory</li>
+                <li>Access to networking events</li>
+                <li>Discounted rates for special events</li>
+            </ul>
+        </div>
+    </div>
+    <div id="bronze-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Bronze Membership Benefits</h2>
+            <ul>
+                <li>All NP benefits</li>
+                <li>Company spotlight on the homepage once a year</li>
+                <li>Free entry to two special events</li>
+            </ul>
+        </div>
+    </div>
+    <div id="silver-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Silver Membership Benefits</h2>
+            <ul>
+                <li>All Bronze benefits</li>
+                <li>Company spotlight on the homepage twice a year</li>
+                <li>Free entry to all special events</li>
+                <li>Training workshops</li>
+            </ul>
+        </div>
+    </div>
+    <div id="gold-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Gold Membership Benefits</h2>
+            <ul>
+                <li>All Silver benefits</li>
+                <li>Company spotlight on the homepage four times a year</li>
+                <li>Banner advertising on the website</li>
+                <li>Exclusive sponsorship opportunities</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Timbuktu Chamber of Commerce</p>
+        <p>Zureyma Quetzaili Manrique Santiago | WDD 231</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
