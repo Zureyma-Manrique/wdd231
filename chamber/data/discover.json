@@ -3,48 +3,48 @@
     "name": "Djingareyber Mosque",
     "address": "Timbuktu, Mali",
     "description": "A famous learning center of Timbuktu, it is one of the three great mosques of the city.",
-    "image": "images/djingareyber.jpg"
+    "image": "images/djingareyber.webp"
   },
   {
     "name": "Sankore Mosque",
     "address": "Timbuktu, Mali",
     "description": "Part of the University of Sankore, this mosque is another of Timbuktu's great centers of learning.",
-    "image": "images/sankore.jpg"
+    "image": "images/sankore.webp"
   },
   {
     "name": "Sidi Yahya Mosque",
     "address": "Timbuktu, Mali",
     "description": "The third of the great mosques of Timbuktu, known for its beautiful architecture.",
-    "image": "images/sidi_yahya.jpeg"
+    "image": "images/sidi_yahya.webp"
   },
   {
     "name": "Timbuktu Manuscripts",
     "address": "Various locations, Timbuktu, Mali",
     "description": "Ancient manuscripts that cover a wide range of subjects, from mathematics to astronomy.",
-    "image": "images/manuscripts.jpg"
+    "image": "images/manuscripts.webp"
   },
   {
     "name": "Timbuktu Market",
     "address": "Central Timbuktu, Mali",
     "description": "A bustling market where you can find local crafts, foods, and textiles.",
-    "image": "images/market.jpg"
+    "image": "images/market.webp"
   },
   {
     "name": "The Explorers' Houses",
     "address": "Timbuktu, Mali",
     "description": "The houses where famous explorers like René Caillié and Heinrich Barth stayed.",
-    "image": "images/explorers_house.jpg"
+    "image": "images/explorers_house.webp"
   },
   {
     "name": "The Flame of Peace",
     "address": "Timbuktu, Mali",
     "description": "A monument commemorating the end of the Tuareg Rebellion.",
-    "image": "images/flame_of_peace.jpg"
+    "image": "images/flame_of_peace.webp"
   },
   {
     "name": "The Niger River",
     "address": "Near Timbuktu, Mali",
     "description": "Enjoy a boat trip on the Niger River and experience the lifeblood of the region.",
-    "image": "images/niger_river.jpg"
+    "image": "images/niger_river.webp"
   }
 ]
