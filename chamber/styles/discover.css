@@ -1,0 +1,71 @@
+/* --- Discover Page --- */
+#discover-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.discover-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.discover-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.discover-card h2 {
+    color: #003366;
+}
+
+.discover-card p {
+    margin: 0.5rem 0;
+}
+
+.discover-card address {
+    font-style: normal;
+    color: #555;
+}
+
+.discover-card button {
+    background-color: #ff9900;
+    color: #003366;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#visitor-message {
+    text-align: center;
+    padding: 1rem;
+    background-color: #eef7ff;
+    border: 1px solid #bde0fe;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+
+/* Medium Screens */
+@media (min-width: 641px) {
+    #discover-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .discover-card img:hover {
+        transform: scale(1.05);
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1025px) {
+    #discover-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
