@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HabitFlow - A personal habit tracker to help you build positive daily habits.">
+    <title>HabitFlow - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>HabitFlow</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Dashboard</a></li>
+                    <li><a href="library.html">Habit Library</a></li>
+                    <li><a href="progress.html">Progress</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="add-habit-section">
+                <h2>Add a New Habit</h2>
+                <form id="add-habit-form">
+                    <div class="form-group">
+                        <label for="habit-name">Habit Name</label>
+                        <input type="text" id="habit-name" placeholder="e.g., Drink 8 glasses of water" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="habit-frequency">Frequency</label>
+                        <select id="habit-frequency">
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <button type="submit">Add Habit</button>
+                </form>
+            </section>
+
+            <section class="habits-section">
+                <h2>My Habits</h2>
+                <div id="habits-container">
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 HabitFlow | WDD 231 Individual Project</p>
+        </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background-color: #f7fafc;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #6366f1;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #4f46e5;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #6366f1;
+    font-size: 1.8rem;
+    margin-top: 0;
+    border-bottom: 3px solid #10b981;
+    padding-bottom: 15px;
+}
+
+/* Form Styles */
+#add-habit-form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 769px) {
+    #add-habit-form {
+        grid-template-columns: 1fr 1fr auto;
+        align-items: end;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#add-habit-form label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+#add-habit-form input,
+#add-habit-form select {
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+#add-habit-form button {
+    background-color: #10b981;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#add-habit-form button:hover {
+    background-color: #059669;
+}
+
+/* Habit Cards */
+#habits-container,
+#habit-library-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.habit-card {
+    background-color: #f7fafc;
+    border: 2px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.habit-card.completed {
+    border-left: 5px solid #10b981;
+}
+
+.habit-card .habit-info {
+    flex-grow: 1;
+}
+
+.habit-card h3 {
+    margin: 0 0 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+}
+
+.habit-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #718096;
+}
+
+.habit-card .habit-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #2d3748;
+    color: #a0aec0;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
