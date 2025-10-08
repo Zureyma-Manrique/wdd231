@@ -1,11 +1,15 @@
-/* General Body Styles */
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #2d3748;
     background-color: #f7fafc;
-    margin: 0;
-    padding: 0;
 }
 
 .container {
@@ -20,12 +24,14 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
 }
 
 header h1 {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     font-size: 2.5rem;
+    animation: fadeInDown 0.6s ease;
 }
 
 nav ul {
@@ -35,6 +41,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -44,25 +51,32 @@ nav a {
     font-weight: 600;
     padding: 10px 15px;
     border-radius: 8px;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-nav a:hover,
+nav a:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
 nav a.active {
     background-color: #4f46e5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Main Content */
 main {
     padding: 40px 0;
+    min-height: calc(100vh - 250px);
 }
 
 section {
     background-color: white;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 40px;
+    animation: fadeInUp 0.6s ease;
 }
 
 h2 {
@@ -72,6 +86,14 @@ h2 {
     margin-top: 0;
     border-bottom: 3px solid #10b981;
     padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* Library Description */
+.library-description {
+    margin-bottom: 25px;
+    color: #718096;
+    font-size: 1rem;
 }
 
 /* Form Styles */
@@ -96,6 +118,7 @@ h2 {
 #add-habit-form label {
     font-weight: 500;
     margin-bottom: 8px;
+    color: #4a5568;
 }
 
 #add-habit-form input,
@@ -104,22 +127,38 @@ h2 {
     border: 2px solid #e2e8f0;
     border-radius: 8px;
     font-family: 'Inter', sans-serif;
+    transition: border-color 0.3s ease;
+    font-size: 1rem;
+}
+
+#add-habit-form input:focus,
+#add-habit-form select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
 #add-habit-form button {
     background-color: #10b981;
     color: white;
-    padding: 12px 20px;
+    padding: 12px 24px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
 #add-habit-form button:hover {
     background-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+#add-habit-form button:active {
+    transform: translateY(0);
 }
 
 /* Habit Cards */
@@ -130,18 +169,46 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #718096;
+    grid-column: 1 / -1;
+}
+
+.empty-state h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #6366f1;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    font-size: 1rem;
+}
+
+/* Habit Card Styles */
 .habit-card {
     background-color: #f7fafc;
     border: 2px solid #e2e8f0;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.4s ease;
+}
+
+.habit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .habit-card.completed {
     border-left: 5px solid #10b981;
+    background-color: #f0fdf4;
 }
 
 .habit-card .habit-info {
@@ -149,9 +216,10 @@ h2 {
 }
 
 .habit-card h3 {
-    margin: 0 0 5px;
+    margin: 0 0 8px;
     font-family: 'Poppins', sans-serif;
     font-size: 1.2rem;
+    color: #2d3748;
 }
 
 .habit-card p {
@@ -160,11 +228,94 @@ h2 {
     color: #718096;
 }
 
+.habit-card .habit-actions {
+    display: flex;
+    gap: 8px;
+}
+
 .habit-card .habit-actions button {
-    background: none;
+    background: white;
+    border: 2px solid #e2e8f0;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.habit-card .complete-btn:hover {
+    background-color: #10b981;
+    border-color: #10b981;
+    transform: scale(1.1);
+}
+
+.habit-card .delete-btn:hover {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    transform: scale(1.1);
+}
+
+/* Library Add Button */
+.add-from-library-btn {
+    background-color: #6366f1;
+    color: white;
     border: none;
     cursor: pointer;
-    padding: 5px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    min-width: 45px;
+}
+
+.add-from-library-btn:hover {
+    background-color: #4f46e5;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* Progress Section */
+#progress-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.progress-stat {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.progress-stat:hover {
+    transform: translateY(-6px);
+}
+
+.progress-stat h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.progress-stat p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.progress-stat:nth-child(2) {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.progress-stat:nth-child(3) {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
 }
 
 /* Footer */
@@ -174,4 +325,78 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .progress-stat p {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .habit-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .habit-card .habit-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }
