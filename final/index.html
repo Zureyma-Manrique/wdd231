@@ -4,13 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HabitFlow - A personal habit tracker to help you build positive daily habits.">
-    <title>HabitFlow - Dashboard</title>
+    <meta name="description"
+        content="HabitFlow - A personal habit tracker to help you build positive daily habits and achieve your goals through consistent tracking and motivation.">
+    <meta name="author" content="Zureyma Quetzaili Manrique Santiago">
+    <title>HabitFlow - Personal Habit Tracker Dashboard</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HabitFlow - Personal Habit Tracker">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://zureyma-manrique.github.io/wdd231/final/images/habitflow-og.png">
+    <meta property="og:url" content="https://zureyma-manrique.github.io/wdd231/final/">
+    <meta property="og:description"
+        content="Build positive daily habits with HabitFlow. Track your progress, stay motivated, and achieve your personal goals with our intuitive habit tracking system.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -29,6 +46,8 @@
     </header>
 
     <main>
+        <h1>My Habit Dashboard</h1>
+
         <div class="container">
             <section class="add-habit-section">
                 <h2>Add a New Habit</h2>
@@ -49,7 +68,7 @@
             </section>
 
             <section class="habits-section">
-                <h2>My Habits</h2>
+                <h2>My Active Habits</h2>
                 <div id="habits-container"></div>
             </section>
         </div>
@@ -57,7 +76,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 HabitFlow | WDD 231 Individual Project</p>
+            <p>&copy; <span id="current-year"></span> HabitFlow | Zureyma Quetzaili Manrique Santiago | WDD 231</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
         </div>
     </footer>
 
