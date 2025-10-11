@@ -1,18 +1,66 @@
 [
-  { "name": "Drink 8 glasses of water", "frequency": "daily" },
-  { "name": "Read for 20 minutes", "frequency": "daily" },
-  { "name": "Exercise for 30 minutes", "frequency": "daily" },
-  { "name": "Meditate for 10 minutes", "frequency": "daily" },
-  { "name": "Write in a journal", "frequency": "daily" },
-  { "name": "Go for a walk", "frequency": "daily" },
-  { "name": "Eat 5 servings of fruit and vegetables", "frequency": "daily" },
-  { "name": "Plan your day", "frequency": "daily" },
-  { "name": "No screen time 1 hour before bed", "frequency": "daily" },
-  { "name": "Tidy up for 15 minutes", "frequency": "daily" },
-  { "name": "Review weekly goals", "frequency": "weekly" },
-  { "name": "Meal prep for the week", "frequency": "weekly" },
-  { "name": "Deep clean one room", "frequency": "weekly" },
-  { "name": "Call a friend or family member", "frequency": "weekly" },
-  { "name": "Learn a new skill for 1 hour", "frequency": "weekly" },
-  { "name": "Go to the church", "frequency": "weekly" }
+  {
+    "name": "Drink 8 glasses of water",
+    "frequency": "daily"
+  },
+  {
+    "name": "Read for 20 minutes",
+    "frequency": "daily"
+  },
+  {
+    "name": "Exercise for 30 minutes",
+    "frequency": "daily"
+  },
+  {
+    "name": "Meditate for 10 minutes",
+    "frequency": "daily"
+  },
+  {
+    "name": "Write in a journal",
+    "frequency": "daily"
+  },
+  {
+    "name": "Go for a walk",
+    "frequency": "daily"
+  },
+  {
+    "name": "Eat 5 servings of fruit and vegetables",
+    "frequency": "daily"
+  },
+  {
+    "name": "Plan your day",
+    "frequency": "daily"
+  },
+  {
+    "name": "No screen time 1 hour before bed",
+    "frequency": "daily"
+  },
+  {
+    "name": "Tidy up for 15 minutes",
+    "frequency": "daily"
+  },
+  {
+    "name": "Review weekly goals",
+    "frequency": "weekly"
+  },
+  {
+    "name": "Meal prep for the week",
+    "frequency": "weekly"
+  },
+  {
+    "name": "Deep clean one room",
+    "frequency": "weekly"
+  },
+  {
+    "name": "Call a friend or family member",
+    "frequency": "weekly"
+  },
+  {
+    "name": "Learn a new skill for 1 hour",
+    "frequency": "weekly"
+  },
+  {
+    "name": "Go to the church",
+    "frequency": "weekly"
+  }
 ]

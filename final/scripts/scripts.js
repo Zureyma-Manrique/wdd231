@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <p>Streak: ${habit.streak || 0} ${habit.frequency === 'daily' ? 'days' : 'weeks'} | ${habit.frequency}</p>
                 </div>
                 <div class="habit-actions">
-                    <button class="complete-btn" data-index="${index}" title="Mark as complete">✔️</button>
-                    <button class="delete-btn" data-index="${index}" title="Delete habit">❌</button>
+                    <button class="complete-btn" data-index="${index}" title="Mark as complete" aria-label="Mark ${habit.name} as complete">✔️</button>
+                    <button class="delete-btn" data-index="${index}" title="Delete habit" aria-label="Delete ${habit.name}">❌</button>
                 </div>
             `;
             habitsContainer.appendChild(habitCard);
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         <h3>${suggestion.name}</h3>
                         <p>Frequency: ${suggestion.frequency}</p>
                     </div>
-                    <button class="add-from-library-btn" data-name="${suggestion.name}" data-frequency="${suggestion.frequency}" title="Add to dashboard">+</button>
+                    <button class="add-from-library-btn" data-name="${suggestion.name}" data-frequency="${suggestion.frequency}" title="Add to dashboard" aria-label="Add ${suggestion.name} to dashboard">+</button>
                 `;
                 habitLibraryContainer.appendChild(suggestionCard);
             });
@@ -243,12 +243,29 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
+    // Update footer with current year and last modified date
+    const updateFooter = () => {
+        const currentYearSpan = document.getElementById('current-year');
+        const lastModifiedSpan = document.getElementById('last-modified');
+
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+        
+        if (lastModifiedSpan) {
+            lastModifiedSpan.textContent = document.lastModified;
+        }
+    };
+
     // Initial Render based on the current page
-    if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
+    if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/final/') || window.location.pathname.endsWith('/')) {
         renderHabits();
     } else if (window.location.pathname.endsWith('library.html')) {
         await renderHabitLibrary();
     } else if (window.location.pathname.endsWith('progress.html')) {
         renderProgress();
     }
+
+    // Update footer on all pages
+    updateFooter();
 });

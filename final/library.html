@@ -4,20 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HabitFlow - A personal habit tracker to help you build positive daily habits.">
+    <meta name="description"
+        content="Browse our curated library of healthy habit suggestions to help you build a better lifestyle and achieve your personal development goals.">
+    <meta name="author" content="Zureyma Quetzaili Manrique Santiago">
     <title>HabitFlow - Habit Library</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="HabitFlow - Habit Library">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://zureyma-manrique.github.io/wdd231/final/images/habitflow-og.png">
+    <meta property="og:url" content="https://zureyma-manrique.github.io/wdd231/final/library.html">
+    <meta property="og:description"
+        content="Discover 15+ curated habit suggestions to kickstart your personal growth journey with HabitFlow.">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap"
         rel="stylesheet">
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
     <header>
         <div class="container">
-            <h1>HabitFlow</h1>
+            <div class="site-logo">HabitFlow</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Dashboard</a></li>
@@ -29,6 +46,8 @@
     </header>
 
     <main>
+        <h1>Habit Library</h1>
+
         <div class="container">
             <section class="library-section">
                 <h2>Habit Library</h2>
@@ -41,7 +60,8 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 HabitFlow | WDD 231 Individual Project</p>
+            <p>&copy; <span id="current-year"></span> HabitFlow | Zureyma Quetzaili Manrique Santiago | WDD 231</p>
+            <p>Last Modification: <span id="last-modified"></span></p>
         </div>
     </footer>
 
